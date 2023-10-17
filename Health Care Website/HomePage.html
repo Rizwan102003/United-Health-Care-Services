@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - United Health Care</title>
+    <link rel="stylesheet" href="styleHomePage.css">
+    <link rel="stylesheet" href="styleutil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="header-icon">
+        <img src="537-5377029_home-health-care-logo-hd-png-download.png" class="icon" alt="header-icon">
+    </div>
+    <div class="navigation-bar">
+        <nav class="navbar">
+            <ul>
+                <li class="highlight"><a href="HomePage.html">Home</a></li>
+                <li><a href="AboutUs.html">About</a></li>
+                <li><a href="LoginPage.html">Login/Register</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Community.html">Community</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <div class="body mtop mbot">
+        <div class="body-wrapper ptop pbot p">
+            <h1 class="font-size-60px center">Welcome
+            </h1>
+            <p class="font-size-30px p mtop mbot">
+                At United Home Healthcare, we believe that everyone deserves access to quality healthcare and support. In a world that's constantly evolving, we stand as your dedicated partner, offering innovative solutions and empathetic care every step of the way.
+            </p>
+            <div class="covid-update">
+                <h2 class="center mtop mbot black">Dashboard</h2>
+                <div class="dashboard">
+                    <div class="total">
+                        
+                    </div>
+                    <div class="active">
+                        
+                    </div>
+                    <div class="discharged">
+                        
+                    </div>
+                    <div class="death mbot">
+                        
+                    </div>
+                </div>
+                <h3 class="center mtop mbot black">Check out our Services</h3>
+                <div class="cou-serv">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <img src="image1.jpg" alt="Image 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="image2.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="image3.jpg" alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <p class="font-size-20px mtop mbot center i b">
+            "Empowering Health, Transforming Lives."
+        </p>
+    </div>
+    <script>
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+        let counter = 1;
+        const slideWidth = carouselImages[0].clientWidth;
+
+        function slide() {
+            carouselSlide.style.transition = 'transform 0.5s ease-in-out';
+            carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
+            counter++;
+
+            if (counter === carouselImages.length) {
+                setTimeout(() => {
+                    carouselSlide.style.transition = 'none';
+                    carouselSlide.style.transform = 'translateX(0)';
+                    counter = 1;
+                }, 500);
+            }
+        }
+
+        setInterval(slide, 3000); // Change slide every 3 seconds (3000 milliseconds)
+
+    </script>
+</body>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>We Expected the Unexpected.</p>
+                <div class="social-links">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: unitedhealth24X7@gmail.com</p>
+                <p>Phone: +91 9876543210</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 United Home Healthcare. All rights reserved.</p>
+    </div>
+</footer>
+</html>
